@@ -33,10 +33,6 @@ class Users {
       .where(where)
       .update(values)
   }
-  findAll () {
-    return knex.select()
-      .table(this.table)
-  }
 }
 
 module.exports = new Users()

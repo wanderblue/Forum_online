@@ -54,12 +54,6 @@ module.exports = function (app) {
         res.json(dbTopics)
       })
   })
-  app.get('/api/allUser', function (req, res) {
-    Users.findAll()
-      .then(function (dbTopics) {
-        res.json(dbTopics)
-      })
-  })
   // POST route for saving a new todo. You can create a todo using the data on req.body
   app.post('/api/new', function (req, res) {
     Comments.create(req.body)
